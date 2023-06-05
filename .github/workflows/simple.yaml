@@ -2,13 +2,14 @@ name: test run command
 
 on: [push]
 
-jobs: 
+jobs:
   run-shell-command:
-      runs-on: ubuntu-latest
-      steps:
-        - name: echo string
-          run: echo "echo hello"
-        - name: mulitline commands
-          run:  |
-            node -v
-            npm -v
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo string
+        run: echo "echo hello"
+      - name: mulitline commands
+        run: |
+          node -v
+          npm -v
+          java --version
